@@ -29,4 +29,11 @@ public class Print {
             System.out.print(userX.name() + "\n");
         }
     }
+
+    public void getFollowing(User user) {
+        for(int i = 0; i < user.following().size();i ++){
+            User userX = (User) user.following().get(i);
+            System.out.print(userX.name() + "\n");
+        }
+    }
 }

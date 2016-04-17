@@ -8,7 +8,7 @@ public class JavaNetwork {
     public User user;
     public static boolean exit = false;
     public UserStorage userStorage = new UserStorage();
-    public static Print print = new Print();
+    public static Print printIt = new Print();
 
 
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class JavaNetwork {
         javaNetwork.welcome();
         javaNetwork.enterName();
         while(exit == false) {
-            print.getMenu();
+            printIt.getMenu();
             javaNetwork.menuChoice();
         }
     }
@@ -36,7 +36,6 @@ public class JavaNetwork {
             user = userStorage.getUser(name);
             System.out.print("Welcome back " + name + "\n");
         }
-
     }
 
     public String scan() {
@@ -61,6 +60,7 @@ public class JavaNetwork {
                 followSomeone();
                 break;
             case "5":
+                homeFeed();
                 break;
             case "6":
                 signOut();
@@ -80,7 +80,7 @@ public class JavaNetwork {
     }
 
     public void viewTimeline() {
-        print.getMessages(user);
+        printIt.getMessages(user);
     }
 
     public void signOut() {
@@ -90,12 +90,12 @@ public class JavaNetwork {
 
     public void viewOtherTimeline() {
         System.out.print("Who do you want to see?\n");
-        print.getUsers(userStorage);
+        printIt.getUsers(userStorage);
         String name = scan();
         if (userStorage.userExist(name)){
             User chosenUser = userStorage.getUser(name);
             System.out.print(name + "'s Messages:\n");
-            print.getMessages(chosenUser);
+            printIt.getMessages(chosenUser);
         }else{
             System.out.print("Person does no exist \n");
         }
@@ -103,7 +103,7 @@ public class JavaNetwork {
 
     public void followSomeone(){
         System.out.print("Who do you want to follow?\n");
-        print.getUsers(userStorage);
+        printIt.getUsers(userStorage);
         String name = scan();
         if (userStorage.userExist(name)){
             User chosenUser = userStorage.getUser(name);
@@ -114,8 +114,14 @@ public class JavaNetwork {
         }
     }
 
-    public void userSelector(String name){
-
+    public void homeFeed(){
+        System.out.print("You are following:\n");
+        printIt.getFollowing(user);
+        for(int i = 0; i < user.following().size(); i++){
+            User userX = (User) user.following().get(i);
+            System.out.print("Messages from " + userX.name()+ ":\n");
+            printIt.getMessages(userX);
+        }
     }
 
 
