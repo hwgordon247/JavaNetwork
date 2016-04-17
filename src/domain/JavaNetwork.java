@@ -38,9 +38,12 @@ public class JavaNetwork {
         String name = scan();
         if (!userStorage.userExist(name)){
             user = new User(name);
+            userStorage.storeUser(user);
             System.out.print("Hi " + name + "\n");
+            System.out.print(userStorage.users);
         }else{
-            System.out.print("Welcome back" + name + "\n");
+            user = userStorage.getUser(name);
+            System.out.print("Welcome back " + name + "\n");
         }
 
     }

@@ -16,7 +16,7 @@ public class UserStorage {
         boolean response = false;
         for(int i=0; i< users.size(); i++){
             User userX = (User) users.get(i);
-            if(userX.name() == name) {
+            if(userX.name().equals(name)) {
                 response = true;
                 break;
             }
@@ -28,7 +28,7 @@ public class UserStorage {
         User chosenUser = null;
         for(int i=0; i< users.size(); i++){
             User userX = (User) users.get(i);
-            if(userX.name() == name) {
+            if(userX.name().equals(name)) {
                 chosenUser = userX;
                 break;
             }
