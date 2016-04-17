@@ -40,7 +40,7 @@ public class JavaNetwork {
             user = new User(name);
             userStorage.storeUser(user);
             System.out.print("Hi " + name + "\n");
-            System.out.print(userStorage.users);
+            System.out.print(userStorage.users());
         }else{
             user = userStorage.getUser(name);
             System.out.print("Welcome back " + name + "\n");
@@ -63,6 +63,9 @@ public class JavaNetwork {
             case "2":
                 viewTimeline();
                 break;
+            case "3":
+                viewOtherTimeline();
+                break;
             case "4":
                 signOut();
                 break;
@@ -81,14 +84,33 @@ public class JavaNetwork {
     }
 
     public void viewTimeline() {
-        for(int i = 0; i < user.messages().size();i ++){
-            System.out.print(user.messages().get(i) + "\n");
-        }
+        printMessages(user);
     }
 
     public void signOut() {
         System.out.print("Successfully Signed Out\n");
         enterName();
+    }
+
+    public void viewOtherTimeline() {
+        System.out.print("Who do you want to see?\n");
+        for(int i = 0; i < userStorage.users().size(); i ++){
+            User userX = (User) userStorage.users().get(i);
+            System.out.print(userX.name() + "\n");
+        }
+        String name = scan();
+        if (userStorage.userExist(name)){
+            User chosenUser = userStorage.getUser(name);
+            printMessages(chosenUser);
+        }else{
+            System.out.print("Person does no exist \n");
+        }
+    }
+
+    public void printMessages(User chosenUser) {
+        for(int i = 0; i < chosenUser.messages().size();i ++){
+            System.out.print(chosenUser.messages().get(i) + "\n");
+        }
     }
 
 

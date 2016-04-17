@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Created by hwgordon on 17/04/2016.
  */
 public class UserStorage {
-    public ArrayList users = new ArrayList();
+    private ArrayList users = new ArrayList();
 
     public void storeUser(User user) {
         if(!userExist(user.name())){users.add(user);}
@@ -34,6 +34,10 @@ public class UserStorage {
             }
         }
         return chosenUser;
+    }
+
+    public ArrayList users(){
+        return users;
     }
 
 }

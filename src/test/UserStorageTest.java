@@ -23,7 +23,7 @@ public class UserStorageTest {
     @Test
     public void canStoreUser() {
         userStorage.storeUser(user);
-        assertEquals(1, userStorage.users.size());
+        assertEquals(1, userStorage.users().size());
     }
 
     @Test
