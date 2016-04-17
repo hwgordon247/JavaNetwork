@@ -9,10 +9,12 @@ public class Print {
     public void getMenu() {
         System.out.print("Main Menu\nPlease pick an option:\n");
         System.out.print("1. Post Message\n");
-        System.out.print("2. View Timeline\n");
-        System.out.print("3. View Someone else\n");
-        System.out.print("4. Sign out\n");
-        System.out.print("5. Quit\n");
+        System.out.print("2. View Personal Timeline\n");
+        System.out.print("3. View Someone's Timeline\n");
+        System.out.print("4. Follow Someone else\n");
+        System.out.print("5. View Home Feed\n");
+        System.out.print("6. Sign out\n");
+        System.out.print("7. Quit\n");
     }
 
     public void getMessages(User chosenUser) {

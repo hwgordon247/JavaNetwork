@@ -58,9 +58,14 @@ public class JavaNetwork {
                 viewOtherTimeline();
                 break;
             case "4":
-                signOut();
+                followSomeone();
                 break;
             case "5":
+                break;
+            case "6":
+                signOut();
+                break;
+            case "7":
                 exit = true;
                 break;
             default :
@@ -94,6 +99,23 @@ public class JavaNetwork {
         }else{
             System.out.print("Person does no exist \n");
         }
+    }
+
+    public void followSomeone(){
+        System.out.print("Who do you want to follow?\n");
+        print.getUsers(userStorage);
+        String name = scan();
+        if (userStorage.userExist(name)){
+            User chosenUser = userStorage.getUser(name);
+            System.out.print("You are now following " + name + "\n");
+            user.storeFollowing(chosenUser);
+        }else{
+            System.out.print("Person does no exist \n");
+        }
+    }
+
+    public void userSelector(String name){
+
     }
 
 

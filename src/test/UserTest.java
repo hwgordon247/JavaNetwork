@@ -10,6 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class UserTest {
     String name = "Spike";
     User user = new User(name);
+    User user2 = new User("Nikesh");
 
 
     @Test
@@ -21,5 +22,11 @@ public class UserTest {
     public void canStoreMessage() {
         user.storeMessage("hello");
         assertEquals(1, user.messages().size());
+    }
+
+    @Test
+    public void canStoreFollowingUsers() {
+        user.storeFollowing(user2);
+        assertEquals(1, user.following().size());
     }
 }

@@ -7,6 +7,7 @@ import java.util.*;
 public class User {
     private String name;
     private ArrayList messages = new ArrayList();
+    private ArrayList following = new ArrayList();
 
     public User(String inputName) {
         name = inputName;
@@ -16,12 +17,20 @@ public class User {
         messages.add(message);
     }
 
+    public void storeFollowing(User chosenUser){
+        following.add(chosenUser);
+    }
+
     public String name() {
         return name;
     }
 
     public ArrayList messages() {
         return messages;
+    }
+
+    public ArrayList following() {
+        return following;
     }
 
 

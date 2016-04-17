@@ -47,7 +47,7 @@ public class PrintTest {
     @Test
     public void viewMenu() {
         print.getMenu();
-        assertEquals("Main Menu\nPlease pick an option:\n1. Post Message\n2. View Timeline\n3. View Someone else\n4. Sign out\n5. Quit\n", outContent.toString());
+        assertEquals("Main Menu\nPlease pick an option:\n1. Post Message\n2. View Personal Timeline\n3. View Someone's Timeline\n4. Follow Someone else\n5. View Home Feed\n6. Sign out\n7. Quit\n", outContent.toString());
     }
 
 //    @Test
