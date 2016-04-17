@@ -16,7 +16,6 @@ import static org.mockito.Mockito.when;
 public class UserStorageTest {
 
     UserStorage userStorage = new UserStorage();
-//    @Mock private User user;
     User user = mock(User.class);
 
 

@@ -8,6 +8,7 @@ public class JavaNetwork {
     public User user;
     public static boolean exit = false;
     public UserStorage userStorage = new UserStorage();
+    public static Print print = new Print();
 
 
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class JavaNetwork {
         javaNetwork.welcome();
         javaNetwork.enterName();
         while(exit == false) {
-            javaNetwork.menu();
+            print.getMenu();
             javaNetwork.menuChoice();
         }
     }
@@ -24,23 +25,13 @@ public class JavaNetwork {
         System.out.print("Welcome to the Java Network\n");
     }
 
-    public void menu() {
-        System.out.print("Main Menu\nPlease pick an option:\n");
-        System.out.print("1. Post Message\n");
-        System.out.print("2. View Timeline\n");
-        System.out.print("3. View Someone else\n");
-        System.out.print("4. Sign out\n");
-        System.out.print("5. Quit\n");
-    }
-
     public void enterName() {
-        System.out.print("Enter your name:");
+        System.out.print("Enter your name:\n");
         String name = scan();
         if (!userStorage.userExist(name)){
             user = new User(name);
             userStorage.storeUser(user);
             System.out.print("Hi " + name + "\n");
-            System.out.print(userStorage.users());
         }else{
             user = userStorage.getUser(name);
             System.out.print("Welcome back " + name + "\n");
@@ -73,18 +64,18 @@ public class JavaNetwork {
                 exit = true;
                 break;
             default :
-                System.out.print("N/A");
+                System.out.print("N/A\n");
         }
     }
 
     public void createMessage(){
-        System.out.print("Write your message:");
+        System.out.print("Write your message:\n");
         String message = scan();
         user.storeMessage(message);
     }
 
     public void viewTimeline() {
-        printMessages(user);
+        print.getMessages(user);
     }
 
     public void signOut() {
@@ -94,24 +85,18 @@ public class JavaNetwork {
 
     public void viewOtherTimeline() {
         System.out.print("Who do you want to see?\n");
-        for(int i = 0; i < userStorage.users().size(); i ++){
-            User userX = (User) userStorage.users().get(i);
-            System.out.print(userX.name() + "\n");
-        }
+        print.getUsers(userStorage);
         String name = scan();
         if (userStorage.userExist(name)){
             User chosenUser = userStorage.getUser(name);
-            printMessages(chosenUser);
+            System.out.print(name + "'s Messages:\n");
+            print.getMessages(chosenUser);
         }else{
             System.out.print("Person does no exist \n");
         }
     }
 
-    public void printMessages(User chosenUser) {
-        for(int i = 0; i < chosenUser.messages().size();i ++){
-            System.out.print(chosenUser.messages().get(i) + "\n");
-        }
-    }
+
 
 
 
