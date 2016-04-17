@@ -24,4 +24,16 @@ public class UserStorage {
         return response;
     }
 
+    public User getUser(String name) {
+        User chosenUser = null;
+        for(int i=0; i< users.size(); i++){
+            User userX = (User) users.get(i);
+            if(userX.name() == name) {
+                chosenUser = userX;
+                break;
+            }
+        }
+        return chosenUser;
+    }
+
 }

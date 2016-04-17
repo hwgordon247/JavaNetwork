@@ -37,4 +37,11 @@ public class UserStorageTest {
     public void newUser() {
         assertEquals(false, userStorage.userExist(user.name()));
     }
+
+    @Test
+    public void canGetExistingUser() {
+        when(user.name()).thenReturn("Spike");
+        userStorage.storeUser(user);
+        assertEquals(user, userStorage.getUser("Spike"));
+    }
 }

@@ -36,9 +36,13 @@ public class JavaNetwork {
     public void enterName() {
         System.out.print("Enter your name:");
         String name = scan();
-//        userStorage.userExist();
-        user = new User(name);
-        System.out.print("Hi " + name + "\n");
+        if (!userStorage.userExist(name)){
+            user = new User(name);
+            System.out.print("Hi " + name + "\n");
+        }else{
+            System.out.print("Welcome back" + name + "\n");
+        }
+
     }
 
     public String scan() {
