@@ -1,6 +1,7 @@
-/**
+package domain; /**
  * Created by hwgordon on 17/04/2016.
  */
+
 import java.util.Scanner;
 
 public class JavaNetwork {
