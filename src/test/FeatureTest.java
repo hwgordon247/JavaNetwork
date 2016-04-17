@@ -1,6 +1,4 @@
-package test; /**
- * Created by hwgordon on 17/04/2016.
- */
+package test;
 
 import domain.JavaNetwork;
 import domain.Print;
@@ -11,11 +9,12 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
-public class JavaNetworkTest {
-
+/**
+ * Created by hwgordon on 17/04/2016.
+ */
+public class FeatureTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
 
@@ -33,36 +32,21 @@ public class JavaNetworkTest {
         System.setErr(null);
     }
 
+
     String[] args = {};
     JavaNetwork javaNetwork = new JavaNetwork();
 
+    @Test
+    public void na(){
+
+    }
 //    @Test
-//    public void welcomeMessage() {
-//        javaNetwork.main(args);
-//        assertEquals("Welcome to the Java Network\nPlease enter your name:\n", outContent.toString());
-//    }
-//
-//    @Test
-//    public void nameInput() {
+//    public void appRunThrough(){
 //        javaNetwork.main(args);
 //        ByteArrayInputStream in = new ByteArrayInputStream("Spike".getBytes());
 //        System.setIn(in);
-//        verify(console).printLine("Hi Spike");
+//        ByteArrayInputStream in2 = new ByteArrayInputStream("7".getBytes());
+//        System.setIn(in2);
+//        assertEquals("Welcome to the Java Network\nPlease enter your name:\n", outContent.toString());
 //    }
-
-
-
-
-    @Test
-    public void out() {
-        System.out.print("hello");
-        assertEquals("hello", outContent.toString());
-    }
-//
-//    @Test
-//    public void err() {
-//        System.err.print("hello again");
-//        assertEquals("hello again", errContent.toString());
-//    }
-
 }
