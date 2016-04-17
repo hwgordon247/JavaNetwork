@@ -16,4 +16,10 @@ public class UserTest {
     public void initializeWithName(){
         assertEquals(name, user.name);
     }
+
+    @Test
+    public void canStoreMessage() {
+        user.storeMessage("hello");
+        assertEquals(1, user.messages.size());
+    }
 }

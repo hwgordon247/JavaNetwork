@@ -6,7 +6,7 @@ import java.util.*;
 
 public class User {
     public String name;
-    ArrayList messages = new ArrayList();
+    public ArrayList messages = new ArrayList();
 
     public User(String inputName) {
         name = inputName;
