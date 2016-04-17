@@ -5,8 +5,8 @@ package domain; /**
 import java.util.*;
 
 public class User {
-    public String name;
-    public ArrayList messages = new ArrayList();
+    private String name;
+    private ArrayList messages = new ArrayList();
 
     public User(String inputName) {
         name = inputName;
@@ -14,6 +14,14 @@ public class User {
 
     public void storeMessage(String message) {
         messages.add(message);
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public ArrayList messages() {
+        return messages;
     }
 
 

@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class JavaNetwork {
     public User user;
     public static boolean exit = false;
+    public UserStorage userStorage = new UserStorage();
 
 
     public static void main(String[] args) {
@@ -35,6 +36,7 @@ public class JavaNetwork {
     public void enterName() {
         System.out.print("Enter your name:");
         String name = scan();
+//        userStorage.userExist();
         user = new User(name);
         System.out.print("Hi " + name + "\n");
     }
@@ -72,8 +74,8 @@ public class JavaNetwork {
     }
 
     public void viewTimeline() {
-        for(int i = 0; i < user.messages.size();i ++){
-            System.out.print(user.messages.get(i) + "\n");
+        for(int i = 0; i < user.messages().size();i ++){
+            System.out.print(user.messages().get(i) + "\n");
         }
     }
 

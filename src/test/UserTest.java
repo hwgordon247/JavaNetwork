@@ -14,12 +14,12 @@ public class UserTest {
 
     @Test
     public void initializeWithName(){
-        assertEquals(name, user.name);
+        assertEquals(name, user.name());
     }
 
     @Test
     public void canStoreMessage() {
         user.storeMessage("hello");
-        assertEquals(1, user.messages.size());
+        assertEquals(1, user.messages().size());
     }
 }

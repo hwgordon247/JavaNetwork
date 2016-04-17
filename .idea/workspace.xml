@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adaabaea-0744-435c-84ff-47739f5c4d37" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domain/JavaNetwork.java" afterPath="$PROJECT_DIR$/src/domain/JavaNetwork.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domain/User.java" afterPath="$PROJECT_DIR$/src/domain/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domain/UserStorage.java" afterPath="$PROJECT_DIR$/src/domain/UserStorage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/UserStorageTest.java" afterPath="$PROJECT_DIR$/src/test/UserStorageTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/UserTest.java" afterPath="$PROJECT_DIR$/src/test/UserTest.java" />
     </list>
     <ignored path="JavaNetwork.iws" />
@@ -28,38 +31,57 @@
       <file leaf-file-name="JavaNetwork.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/domain/JavaNetwork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            <state relative-caret-position="501">
+              <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
               <folding>
-                <element signature="e#487#488#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
+                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#608#609#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserStorage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#281#282#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/domain/UserStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="418">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="e#203#204#0" expanded="true" />
-                <element signature="e#234#235#0" expanded="true" />
+                <element signature="e#263#264#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/domain/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="506">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding>
-                <element signature="e#244#245#0" expanded="true" />
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#214#215#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#359#360#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,10 +90,12 @@
       <file leaf-file-name="UserStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/UserStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="224">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -101,17 +125,17 @@
         <option value="$PROJECT_DIR$/src/test/unit/User.java" />
         <option value="$PROJECT_DIR$/src/User.java" />
         <option value="$PROJECT_DIR$/src/JavaNetwork.java" />
-        <option value="$PROJECT_DIR$/src/domain/JavaNetwork.java" />
         <option value="$PROJECT_DIR$/src/domain/UserTest.java" />
         <option value="$PROJECT_DIR$/src/UserTest.java" />
         <option value="$PROJECT_DIR$/src/JavaNetworkTest.java" />
         <option value="$PROJECT_DIR$/src/test/JavaNetworkTest.java" />
-        <option value="$PROJECT_DIR$/src/test/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/domain/User.java" />
         <option value="$PROJECT_DIR$/src/domain/UserStorageTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/UserStorageTest.java" />
         <option value="$PROJECT_DIR$/src/domain/UserStorage.java" />
+        <option value="$PROJECT_DIR$/src/domain/User.java" />
+        <option value="$PROJECT_DIR$/src/domain/JavaNetwork.java" />
+        <option value="$PROJECT_DIR$/src/test/UserTest.java" />
       </list>
     </option>
   </component>
@@ -537,27 +561,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RunTest - 2016.04.17 at 12h 08m 02s.xml">
-      <configuration name="RunTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunTest - 2016.04.17 at 12h 08m 18s.xml">
-      <configuration name="RunTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunTest - 2016.04.17 at 12h 13m 43s.xml">
-      <configuration name="RunTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunTest - 2016.04.17 at 15h 33m 42s.xml">
-      <configuration name="RunTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunTest - 2016.04.17 at 15h 35m 49s.xml">
-      <configuration name="RunTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunTest - 2016.04.17 at 15h 37m 13s.xml">
-      <configuration name="RunTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RunTest - 2016.04.17 at 15h 39m 26s.xml">
-      <configuration name="RunTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="test_in_JavaNetwork - 2016.04.17 at 15h 42m 20s.xml">
       <configuration name="test in JavaNetwork" configurationId="JUnit" />
     </history-entry>
@@ -565,6 +568,27 @@
       <configuration name="test in JavaNetwork" configurationId="JUnit" />
     </history-entry>
     <history-entry file="test_in_JavaNetwork - 2016.04.17 at 16h 36m 00s.xml">
+      <configuration name="test in JavaNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_JavaNetwork - 2016.04.17 at 16h 49m 10s.xml">
+      <configuration name="test in JavaNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_JavaNetwork - 2016.04.17 at 16h 49m 57s.xml">
+      <configuration name="test in JavaNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_JavaNetwork - 2016.04.17 at 16h 51m 14s.xml">
+      <configuration name="test in JavaNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_JavaNetwork - 2016.04.17 at 16h 51m 40s.xml">
+      <configuration name="test in JavaNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_JavaNetwork - 2016.04.17 at 17h 15m 45s.xml">
+      <configuration name="test in JavaNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_JavaNetwork - 2016.04.17 at 17h 17m 52s.xml">
+      <configuration name="test in JavaNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_in_JavaNetwork - 2016.04.17 at 17h 19m 58s.xml">
       <configuration name="test in JavaNetwork" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -623,8 +647,8 @@
         <state relative-caret-position="180">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -649,28 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/JavaNetwork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-          <folding>
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="44" />
-          <folding>
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -679,35 +681,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/UserStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/UserStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state relative-caret-position="224">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/domain/JavaNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
+          <folding>
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#608#609#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/UserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/domain/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        <state relative-caret-position="506">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/domain/UserStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
           </folding>
         </state>
       </provider>
