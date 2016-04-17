@@ -6,6 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -27,6 +28,7 @@ public class JavaNetworkTest {
         System.setOut(null);
         System.setErr(null);
     }
+
     String[] args = {};
     JavaNetwork javaNetwork = new JavaNetwork();
 
@@ -34,6 +36,14 @@ public class JavaNetworkTest {
     public void welcomeMessage() {
         javaNetwork.main(args);
         assertEquals("Welcome to the Java Network\nPlease enter your name:\n", outContent.toString());
+    }
+
+    @Test
+    public void nameInput() {
+        javaNetwork.main(args);
+        ByteArrayInputStream in = new ByteArrayInputStream("Spike".getBytes());
+        System.setIn(in);
+//        verify(console).printLine("Hi Spike");
     }
 
 
