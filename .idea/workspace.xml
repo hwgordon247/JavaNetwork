@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="adaabaea-0744-435c-84ff-47739f5c4d37" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.11/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.11/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/domain/JavaNetwork.java" afterPath="$PROJECT_DIR$/src/domain/JavaNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/JavaNetworkTest.java" afterPath="$PROJECT_DIR$/src/test/JavaNetworkTest.java" />
-    </list>
+    <list default="true" id="adaabaea-0744-435c-84ff-47739f5c4d37" name="Default" comment="" />
     <ignored path="JavaNetwork.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
