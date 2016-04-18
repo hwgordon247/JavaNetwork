@@ -104,6 +104,10 @@ public class JavaNetwork {
         System.out.print("Who do you want to see?\n");
         print.getUsers(userStorage);
         String name = scan();
+        findTimelineUser(name);
+    }
+
+    public void findTimelineUser(String name) {
         if (userStorage.userExist(name)){
             viewChosenUser(name);
         }else{
@@ -125,6 +129,10 @@ public class JavaNetwork {
         System.out.print("Who do you want to follow?\n");
         print.getUsers(userStorage);
         String name = scan();
+        findFollowUser(name);
+    }
+
+    public void findFollowUser(String name) {
         if (userStorage.userExist(name)){
             followChosenUser(name);
         }else{
