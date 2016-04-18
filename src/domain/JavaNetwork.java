@@ -2,17 +2,17 @@ package domain; /**
  * Created by hwgordon on 17/04/2016.
  */
 
-import java.util.Scanner;
-
 public class JavaNetwork {
     public User user;
     public static boolean exit = false;
     public UserStorage userStorage;
     public static Print print;
+    public MenuFunctions menuFunctions;
 
     public JavaNetwork(){
         this.print = new Print();
         this.userStorage = new UserStorage();
+        this.menuFunctions = new MenuFunctions();
     }
 
 
@@ -32,7 +32,7 @@ public class JavaNetwork {
 
     public void enterName() {
         System.out.print("Enter your name:\n");
-        String name = scan();
+        String name = MenuFunctions.scan();
         analyseName(name);
     }
 
@@ -55,24 +55,29 @@ public class JavaNetwork {
         System.out.print("Welcome back " + name + "\n");
     }
 
+    public void signOut() {
+        System.out.print("Successfully Signed Out\n");
+        enterName();
+    }
+
 
     public void menuChoice() {
-        String response = scan();
+        String response = menuFunctions.scan();
         switch(response) {
             case "1":
-                createMessage();
+                menuFunctions.createMessage(user);
                 break;
             case "2":
-                viewTimeline();
+                menuFunctions.viewTimeline(print, user);
                 break;
             case "3":
-                viewOtherTimeline();
+                menuFunctions.viewOtherTimeline(print, userStorage);
                 break;
             case "4":
-                followSomeone();
+                menuFunctions.followSomeone(print, userStorage, user);
                 break;
             case "5":
-                homeFeed();
+                menuFunctions.homeFeed(print, user);
                 break;
             case "6":
                 signOut();
@@ -84,88 +89,6 @@ public class JavaNetwork {
                 System.out.print("N/A\n");
         }
     }
-
-    public void createMessage(){
-        System.out.print("Write your message:\n");
-        String message = scan();
-        user.storeMessage(message);
-    }
-
-    public void viewTimeline() {
-        print.getMessages(user);
-    }
-
-    public void signOut() {
-        System.out.print("Successfully Signed Out\n");
-        enterName();
-    }
-
-    public void viewOtherTimeline() {
-        System.out.print("Who do you want to see?\n");
-        print.getUsers(userStorage);
-        String name = scan();
-        findTimelineUser(name);
-    }
-
-    public void findTimelineUser(String name) {
-        if (userStorage.userExist(name)){
-            viewChosenUser(name);
-        }else{
-            notExist();
-        }
-    }
-
-    public void viewChosenUser(String name) {
-        User chosenUser = userStorage.getUser(name);
-        System.out.print(name + "'s Messages:\n");
-        print.getMessages(chosenUser);
-    }
-
-    private void notExist(){
-        System.out.print("Person does no exist \n");
-    }
-
-    public void followSomeone(){
-        System.out.print("Who do you want to follow?\n");
-        print.getUsers(userStorage);
-        String name = scan();
-        findFollowUser(name);
-    }
-
-    public void findFollowUser(String name) {
-        if (userStorage.userExist(name)){
-            followChosenUser(name);
-        }else{
-            notExist();
-        }
-    }
-
-    public void followChosenUser(String name) {
-        User chosenUser = userStorage.getUser(name);
-        System.out.print("You are now following " + name + "\n");
-        user.storeFollowing(chosenUser);
-    }
-
-    public void homeFeed(){
-        System.out.print("You are following:\n");
-        print.getFollowing(user);
-        viewFollowingMessages();
-    }
-
-    private void viewFollowingMessages(){
-        for(int i = 0; i < user.following().size(); i++){
-            User userX = (User) user.following().get(i);
-            System.out.print("Messages from " + userX.name()+ ":\n");
-            print.getMessages(userX);
-        }
-    }
-
-    private String scan() {
-        Scanner reader = new Scanner(System.in).useDelimiter("\\n");
-        String response = reader.next();
-        return response;
-    }
-
 
 
 
