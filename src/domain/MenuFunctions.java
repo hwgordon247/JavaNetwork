@@ -24,7 +24,7 @@ public class MenuFunctions {
         findTimelineUser(name, userStorage, print);
     }
 
-    public void findTimelineUser(String name, UserStorage userStorage, Print print) {
+    private void findTimelineUser(String name, UserStorage userStorage, Print print) {
         if (userStorage.userExist(name)){
             viewChosenUser(name, userStorage, print);
         }else{
@@ -32,7 +32,7 @@ public class MenuFunctions {
         }
     }
 
-    public void viewChosenUser(String name, UserStorage userStorage, Print print) {
+    private void viewChosenUser(String name, UserStorage userStorage, Print print) {
         User chosenUser = userStorage.getUser(name);
         System.out.print(name + "'s Messages:\n");
         print.getMessages(chosenUser);
@@ -49,7 +49,7 @@ public class MenuFunctions {
         findFollowUser(name,userStorage,user);
     }
 
-    public void findFollowUser(String name, UserStorage userStorage, User user) {
+    private void findFollowUser(String name, UserStorage userStorage, User user) {
         if (userStorage.userExist(name)){
             followChosenUser(name, userStorage, user);
         }else{
@@ -57,7 +57,7 @@ public class MenuFunctions {
         }
     }
 
-    public void followChosenUser(String name, UserStorage userStorage, User user) {
+    private void followChosenUser(String name, UserStorage userStorage, User user) {
         User chosenUser = userStorage.getUser(name);
         System.out.print("You are now following " + name + "\n");
         user.storeFollowing(chosenUser);
