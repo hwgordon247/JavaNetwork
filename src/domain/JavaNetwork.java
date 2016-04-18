@@ -33,21 +33,28 @@ public class JavaNetwork {
     public void enterName() {
         System.out.print("Enter your name:\n");
         String name = scan();
+        analyseName(name);
+    }
+
+    private void analyseName(String name) {
         if (!userStorage.userExist(name)){
-            user = new User(name);
-            userStorage.storeUser(user);
-            System.out.print("Hi " + name + "\n");
+            newUser(name);
         }else{
-            user = userStorage.getUser(name);
-            System.out.print("Welcome back " + name + "\n");
+            oldUser(name);
         }
     }
 
-    public String scan() {
-        Scanner reader = new Scanner(System.in).useDelimiter("\\n");
-        String response = reader.next();
-        return response;
+    public void newUser(String name) {
+        user = new User(name);
+        userStorage.storeUser(user);
+        System.out.print("Hi " + name + "\n");
     }
+
+    private void oldUser(String name) {
+        user = userStorage.getUser(name);
+        System.out.print("Welcome back " + name + "\n");
+    }
+
 
     public void menuChoice() {
         String response = scan();
@@ -98,12 +105,20 @@ public class JavaNetwork {
         print.getUsers(userStorage);
         String name = scan();
         if (userStorage.userExist(name)){
-            User chosenUser = userStorage.getUser(name);
-            System.out.print(name + "'s Messages:\n");
-            print.getMessages(chosenUser);
+            viewChosenUser(name);
         }else{
-            System.out.print("Person does no exist \n");
+            notExist();
         }
+    }
+
+    public void viewChosenUser(String name) {
+        User chosenUser = userStorage.getUser(name);
+        System.out.print(name + "'s Messages:\n");
+        print.getMessages(chosenUser);
+    }
+
+    private void notExist(){
+        System.out.print("Person does no exist \n");
     }
 
     public void followSomeone(){
@@ -111,22 +126,36 @@ public class JavaNetwork {
         print.getUsers(userStorage);
         String name = scan();
         if (userStorage.userExist(name)){
-            User chosenUser = userStorage.getUser(name);
-            System.out.print("You are now following " + name + "\n");
-            user.storeFollowing(chosenUser);
+            followChosenUser(name);
         }else{
-            System.out.print("Person does no exist \n");
+            notExist();
         }
+    }
+
+    public void followChosenUser(String name) {
+        User chosenUser = userStorage.getUser(name);
+        System.out.print("You are now following " + name + "\n");
+        user.storeFollowing(chosenUser);
     }
 
     public void homeFeed(){
         System.out.print("You are following:\n");
         print.getFollowing(user);
+        viewFollowingMessages();
+    }
+
+    private void viewFollowingMessages(){
         for(int i = 0; i < user.following().size(); i++){
             User userX = (User) user.following().get(i);
             System.out.print("Messages from " + userX.name()+ ":\n");
             print.getMessages(userX);
         }
+    }
+
+    private String scan() {
+        Scanner reader = new Scanner(System.in).useDelimiter("\\n");
+        String response = reader.next();
+        return response;
     }
 
 
