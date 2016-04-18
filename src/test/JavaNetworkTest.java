@@ -36,33 +36,11 @@ public class JavaNetworkTest {
     String[] args = {};
     JavaNetwork javaNetwork = new JavaNetwork();
 
-//    @Test
-//    public void welcomeMessage() {
-//        javaNetwork.main(args);
-//        assertEquals("Welcome to the Java Network\nPlease enter your name:\n", outContent.toString());
-//    }
-//
-//    @Test
-//    public void nameInput() {
-//        javaNetwork.main(args);
-//        ByteArrayInputStream in = new ByteArrayInputStream("Spike".getBytes());
-//        System.setIn(in);
-//        verify(console).printLine("Hi Spike");
-//    }
-
-
-
 
     @Test
     public void out() {
         System.out.print("hello");
         assertEquals("hello", outContent.toString());
     }
-//
-//    @Test
-//    public void err() {
-//        System.err.print("hello again");
-//        assertEquals("hello again", errContent.toString());
-//    }
 
 }
